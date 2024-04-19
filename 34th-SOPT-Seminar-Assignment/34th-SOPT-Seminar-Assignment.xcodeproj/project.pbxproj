@@ -24,6 +24,13 @@
 		9E1B08BC2BD20A02007AAB48 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08BB2BD20A02007AAB48 /* Colors.swift */; };
 		9E1B08BF2BD20D59007AAB48 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08BE2BD20D59007AAB48 /* LoginView.swift */; };
 		9E1B08C12BD20D63007AAB48 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08C02BD20D63007AAB48 /* LoginViewController.swift */; };
+		9E1B08C52BD21505007AAB48 /* UIView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08C42BD21505007AAB48 /* UIView++.swift */; };
+		9E1B08C72BD2253B007AAB48 /* UITextField++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08C62BD2253B007AAB48 /* UITextField++.swift */; };
+		9E1B08CA2BD2407F007AAB48 /* StringLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08C92BD2407F007AAB48 /* StringLiterals.swift */; };
+		9E1B08CC2BD247DE007AAB48 /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08CB2BD247DE007AAB48 /* UIButton++.swift */; };
+		9E1B08CE2BD294AE007AAB48 /* UIStackView++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08CD2BD294AE007AAB48 /* UIStackView++.swift */; };
+		9E1B08D12BD295C0007AAB48 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D02BD295C0007AAB48 /* WelcomeView.swift */; };
+		9E1B08D32BD295E1007AAB48 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D22BD295E1007AAB48 /* WelcomeViewController.swift */; };
 		9E60904D2BC770C100D018B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60904C2BC770C100D018B2 /* AppDelegate.swift */; };
 		9E60904F2BC770C100D018B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60904E2BC770C100D018B2 /* SceneDelegate.swift */; };
 		9E6090512BC770C100D018B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6090502BC770C100D018B2 /* ViewController.swift */; };
@@ -67,6 +74,13 @@
 		9E1B08BB2BD20A02007AAB48 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9E1B08BE2BD20D59007AAB48 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9E1B08C02BD20D63007AAB48 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9E1B08C42BD21505007AAB48 /* UIView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView++.swift"; sourceTree = "<group>"; };
+		9E1B08C62BD2253B007AAB48 /* UITextField++.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField++.swift"; sourceTree = "<group>"; };
+		9E1B08C92BD2407F007AAB48 /* StringLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringLiterals.swift; sourceTree = "<group>"; };
+		9E1B08CB2BD247DE007AAB48 /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
+		9E1B08CD2BD294AE007AAB48 /* UIStackView++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView++.swift"; sourceTree = "<group>"; };
+		9E1B08D02BD295C0007AAB48 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		9E1B08D22BD295E1007AAB48 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9E6090492BC770C100D018B2 /* 34th-SOPT-Seminar-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPT-Seminar-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E60904C2BC770C100D018B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E60904E2BC770C100D018B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +169,7 @@
 			children = (
 				9E1B08992BD205F8007AAB48 /* Base */,
 				9E1B08BD2BD20D47007AAB48 /* Login */,
+				9E1B08CF2BD295A4007AAB48 /* Welcome */,
 				9E6090502BC770C100D018B2 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -163,6 +178,7 @@
 		9E1B08B82BD208D8007AAB48 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9E1B08C82BD2403B007AAB48 /* String */,
 				9E1B08BA2BD208E7007AAB48 /* AssetsCatalog */,
 				9E1B08B92BD208E2007AAB48 /* Color */,
 				9E1B08AB2BD206F1007AAB48 /* Font */,
@@ -195,6 +211,42 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		9E1B08C22BD214E1007AAB48 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08C32BD214EC007AAB48 /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		9E1B08C32BD214EC007AAB48 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08C62BD2253B007AAB48 /* UITextField++.swift */,
+				9E1B08C42BD21505007AAB48 /* UIView++.swift */,
+				9E1B08CB2BD247DE007AAB48 /* UIButton++.swift */,
+				9E1B08CD2BD294AE007AAB48 /* UIStackView++.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9E1B08C82BD2403B007AAB48 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08C92BD2407F007AAB48 /* StringLiterals.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		9E1B08CF2BD295A4007AAB48 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08D02BD295C0007AAB48 /* WelcomeView.swift */,
+				9E1B08D22BD295E1007AAB48 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		9E6090402BC770C100D018B2 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +275,7 @@
 				9E60905A2BC770C300D018B2 /* Info.plist */,
 				9E1B08B72BD208BD007AAB48 /* Presentation */,
 				9E1B08B82BD208D8007AAB48 /* Resource */,
+				9E1B08C22BD214E1007AAB48 /* Util */,
 				9E6090572BC770C300D018B2 /* LaunchScreen.storyboard */,
 			);
 			path = "34th-SOPT-Seminar-Assignment";
@@ -393,12 +446,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1B08C12BD20D63007AAB48 /* LoginViewController.swift in Sources */,
+				9E1B08D32BD295E1007AAB48 /* WelcomeViewController.swift in Sources */,
 				9E1B089F2BD20632007AAB48 /* BaseViewController.swift in Sources */,
+				9E1B08C52BD21505007AAB48 /* UIView++.swift in Sources */,
 				9E6090512BC770C100D018B2 /* ViewController.swift in Sources */,
 				9E1B08AC2BD206F1007AAB48 /* Font.swift in Sources */,
 				9E1B08BC2BD20A02007AAB48 /* Colors.swift in Sources */,
+				9E1B08CA2BD2407F007AAB48 /* StringLiterals.swift in Sources */,
 				9E60904D2BC770C100D018B2 /* AppDelegate.swift in Sources */,
+				9E1B08CC2BD247DE007AAB48 /* UIButton++.swift in Sources */,
+				9E1B08CE2BD294AE007AAB48 /* UIStackView++.swift in Sources */,
+				9E1B08D12BD295C0007AAB48 /* WelcomeView.swift in Sources */,
 				9E60904F2BC770C100D018B2 /* SceneDelegate.swift in Sources */,
+				9E1B08C72BD2253B007AAB48 /* UITextField++.swift in Sources */,
 				9E1B08BF2BD20D59007AAB48 /* LoginView.swift in Sources */,
 				9E1B089D2BD20629007AAB48 /* BaseView.swift in Sources */,
 			);
