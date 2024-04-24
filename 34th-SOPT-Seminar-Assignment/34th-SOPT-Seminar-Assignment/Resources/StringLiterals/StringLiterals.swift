@@ -24,5 +24,13 @@ enum StringLiterals {
    enum Welcome {
       static let welcomeTitle = "님\n반가워요!"
    }
+   
+   enum Main {
+      static let topTabBarTitle1 = "홈"
+      static let topTabBarTitle2 = "실시간"
+      static let topTabBarTitle3 = "TV프로그램"
+      static let topTabBarTitle4 = "영화"
+      static let topTabBarTitle5 = "파라마운트+"
+   }
 
 }
