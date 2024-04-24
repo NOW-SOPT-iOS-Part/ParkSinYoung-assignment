@@ -25,6 +25,8 @@ final class LoginView: BaseView {
       $0.setLeftPaddingPoints(22)
       $0.layer.cornerRadius = 3
       $0.clearButtonMode = .whileEditing
+      $0.autocorrectionType = .no
+      $0.spellCheckingType = .no
    }
    
    let passwordTextField = UITextField().then {
@@ -35,6 +37,8 @@ final class LoginView: BaseView {
       $0.setLeftPaddingPoints(22)
       $0.layer.cornerRadius = 3
       $0.isSecureTextEntry = true
+      $0.autocorrectionType = .no
+      $0.spellCheckingType = .no
    }
    
    let loginButton = UIButton().then {
