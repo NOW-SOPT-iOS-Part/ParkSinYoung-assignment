@@ -48,7 +48,7 @@ extension LoginViewController: UITextFieldDelegate {
    }
    
    func textFieldDidBeginEditing(_ textField: UITextField) {
-      textField.makeBorderLine(width: 1, color: .gray2())
+      textField.makeBorderLine(width: 1, color: .gray2)
    }
    
    func textFieldDidEndEditing(_ textField: UITextField) {
@@ -69,12 +69,12 @@ extension LoginViewController: UITextFieldDelegate {
          
          if !idText.isEmpty, !passwordText.isEmpty {
             loginBtn.isEnabled = true
-            loginBtn.backgroundColor = .mainColor()
+            loginBtn.backgroundColor = .mainColor
             loginBtn.setTitleColor(.white, for: .normal)
          } else {
             loginBtn.isEnabled = false
-            loginBtn.backgroundColor = .black()
-            loginBtn.setTitleColor(.gray2(), for: .normal)
+            loginBtn.backgroundColor = .black
+            loginBtn.setTitleColor(.gray2, for: .normal)
          }
       }
    }

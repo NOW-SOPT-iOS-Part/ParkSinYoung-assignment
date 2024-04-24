@@ -17,15 +17,15 @@ final class WelcomeView: BaseView {
    }
    
    let welcomeTitleLabel = UILabel().then {
-      $0.textColor = .gray1()
+      $0.textColor = .gray1
       $0.textAlignment = .center
       $0.numberOfLines = 0
       $0.font = UIFont.pretendard(size: 23, weight: .bold)
    }
    
    let backToMainButton = UIButton().then {
-      $0.setButtonTitle(StringLiterals.Login.backToMain, titleColor: .white(), font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
-      $0.backgroundColor = .mainColor()
+      $0.setButtonTitle(StringLiterals.Login.backToMain, titleColor: .white, font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
+      $0.backgroundColor = .mainColor
       $0.layer.cornerRadius = 3
    }
    

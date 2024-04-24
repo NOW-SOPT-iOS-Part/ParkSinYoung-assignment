@@ -19,29 +19,30 @@ extension UIColor {
       self.init(red: r, green: g, blue: b, alpha: alpha)
    }
    
-   static func black(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "000000", alpha: alpha)
+   // 투명도 값 변경 추후 보완
+   @nonobjc static var black: UIColor {
+      return UIColor(fromHex: "000000", alpha: 1.0)
    }
-   static func white(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "ffffff", alpha: alpha)
+   @nonobjc static var white: UIColor {
+      return UIColor(fromHex: "ffffff", alpha: 1.0)
    }
-   static func mainColor(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "FF143C", alpha: alpha)
+   @nonobjc static var mainColor: UIColor {
+      return UIColor(fromHex: "FF143C", alpha: 1.0)
    }
-   static func gray1(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "D6D6D6", alpha: alpha)
+   @nonobjc static var gray1: UIColor {
+      return UIColor(fromHex: "D6D6D6", alpha: 1.0)
    }
-   static func gray2(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "9C9C9C", alpha: alpha)
+   @nonobjc static var gray2: UIColor {
+      return UIColor(fromHex: "9C9C9C", alpha: 1.0)
    }
-   static func gray3(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "626262", alpha: alpha)
+   @nonobjc static var gray3: UIColor {
+      return UIColor(fromHex: "626262", alpha: 1.0)
    }
-   static func gray4(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "2E2E2E", alpha: alpha)
+   @nonobjc static var gray4: UIColor {
+      return UIColor(fromHex: "2E2E2E", alpha: 1.0)
    }
-   static func gray5(alpha: CGFloat = 1.0) -> UIColor {
-      return UIColor(fromHex: "191919", alpha: alpha)
+   @nonobjc static var gray5: UIColor {
+      return UIColor(fromHex: "191919", alpha: 1.0)
    }
    
 }

@@ -13,15 +13,15 @@ final class LoginView: BaseView {
    
    let titleLabel = UILabel().then {
       $0.text = StringLiterals.Login.title
-      $0.textColor = .gray1()
+      $0.textColor = .gray1
       $0.font = UIFont.pretendard(size: 23, weight: .medium)
    }
    
    let idTextField = UITextField().then {
-      $0.backgroundColor = .gray4()
-      $0.textColor = .gray2()
+      $0.backgroundColor = .gray4
+      $0.textColor = .gray2
       $0.font = UIFont.pretendard(size: 15, weight: .semibold)
-      $0.setPlaceholderColor(placeholderColor: .gray2(), StringLiterals.Login.idTextField)
+      $0.setPlaceholderColor(placeholderColor: .gray2, StringLiterals.Login.idTextField)
       $0.setLeftPaddingPoints(22)
       $0.layer.cornerRadius = 3
       $0.clearButtonMode = .whileEditing
@@ -30,10 +30,10 @@ final class LoginView: BaseView {
    }
    
    let passwordTextField = UITextField().then {
-      $0.backgroundColor = .gray4()
-      $0.textColor = .gray2()
+      $0.backgroundColor = .gray4
+      $0.textColor = .gray2
       $0.font = UIFont.pretendard(size: 15, weight: .semibold)
-      $0.setPlaceholderColor(placeholderColor: .gray2(), StringLiterals.Login.passwordTextField)
+      $0.setPlaceholderColor(placeholderColor: .gray2, StringLiterals.Login.passwordTextField)
       $0.setLeftPaddingPoints(22)
       $0.layer.cornerRadius = 3
       $0.isSecureTextEntry = true
@@ -42,19 +42,19 @@ final class LoginView: BaseView {
    }
    
    let loginButton = UIButton().then {
-      $0.setButtonTitle(StringLiterals.Login.loginButton, titleColor: .gray2(), font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
+      $0.setButtonTitle(StringLiterals.Login.loginButton, titleColor: .gray2, font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
       $0.backgroundColor = .black
       $0.layer.cornerRadius = 3
-      $0.makeBorderLine(width: 1, color: .gray4())
+      $0.makeBorderLine(width: 1, color: .gray4)
       $0.isEnabled = false
    }
    
    let findIdButton = UIButton().then {
-      $0.setButtonTitle(StringLiterals.Login.findIdButton, titleColor: .gray2(), font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
+      $0.setButtonTitle(StringLiterals.Login.findIdButton, titleColor: .gray2, font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
    }
    
    let findPasswordButton = UIButton().then {
-      $0.setButtonTitle(StringLiterals.Login.findPasswordButton, titleColor: .gray2(), font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
+      $0.setButtonTitle(StringLiterals.Login.findPasswordButton, titleColor: .gray2, font: UIFont.pretendard(size: 14, weight: .semibold), for: .normal)
    }
    
    let toFindIdPwStackView = UIStackView().then {
@@ -64,18 +64,18 @@ final class LoginView: BaseView {
    
    let divider: UIView = {
        let view = UIView()
-       view.backgroundColor = .gray4()
+       view.backgroundColor = .gray4
        return view
    }()
    
    let noAccountLabel = UILabel().then {
       $0.text = StringLiterals.Login.nonAccount
-      $0.textColor = .gray3()
+      $0.textColor = .gray3
       $0.font = UIFont.pretendard(size: 14, weight: .semibold)
    }
    
    let nicknameCreationButton = UIButton().then {
-      $0.setButtonTitle(StringLiterals.Login.nicknameCreation, titleColor: .gray2(), font: UIFont.pretendard(size: 14, weight: .regular), for: .normal)
+      $0.setButtonTitle(StringLiterals.Login.nicknameCreation, titleColor: .gray2, font: UIFont.pretendard(size: 14, weight: .regular), for: .normal)
       $0.addUnderlineToTitle()
    }
    
