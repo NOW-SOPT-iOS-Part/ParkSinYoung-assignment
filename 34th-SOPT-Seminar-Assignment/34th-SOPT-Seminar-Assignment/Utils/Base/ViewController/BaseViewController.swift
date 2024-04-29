@@ -41,6 +41,35 @@ class BaseViewController: UIViewController {
    // MARK: - Add SetUpKeyboard
    func setUpKeyboard() {}
    
+   func configureNavigationBar() {
+       navigationController?.navigationBar.barTintColor = .clear
+      
+      let leftBarButton = UIButton()
+      leftBarButton.do {
+         $0.setImage(UIImage(resource: .mainViewLogo), for: .normal)
+      }
+      leftBarButton.snp.makeConstraints {
+         $0.width.equalTo(100)
+         $0.height.equalTo(25)
+      }
+
+      navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarButton)
+
+       
+       let rightBarButton = UIButton()
+      rightBarButton.do {
+         $0.setImage(UIImage(named: "kiwoomLogo"), for: .normal)
+         $0.layer.cornerRadius = 44 / 2
+         $0.clipsToBounds = true
+      }
+      rightBarButton.snp.makeConstraints {
+         $0.width.equalTo(44)
+         $0.height.equalTo(40)
+      }
+       
+       navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBarButton)
+   }
+   
    func showAlert(title: String? = nil,
                   message: String? = nil,
                   preferredStyle: UIAlertController.Style = .alert,
