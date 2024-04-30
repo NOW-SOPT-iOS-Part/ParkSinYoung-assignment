@@ -32,9 +32,16 @@
 		9E1B08D12BD295C0007AAB48 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D02BD295C0007AAB48 /* WelcomeView.swift */; };
 		9E1B08D32BD295E1007AAB48 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08D22BD295E1007AAB48 /* WelcomeViewController.swift */; };
 		9E1B08ED2BD96B64007AAB48 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E1B08EC2BD96B64007AAB48 /* Image.xcassets */; };
+		9E1B08F62BD9E06D007AAB48 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08F52BD9E06D007AAB48 /* MainViewController.swift */; };
+		9E1B08F82BD9E1BE007AAB48 /* UISegmentedControl++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B08F72BD9E1BE007AAB48 /* UISegmentedControl++.swift */; };
+		9E1B08FB2BDA2682007AAB48 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 9E1B08FA2BDA2682007AAB48 /* LookinServer */; };
+		9E1B096D2BE11A0E007AAB48 /* HomeContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B096C2BE11A0E007AAB48 /* HomeContentCell.swift */; };
+		9E1B096F2BE11A40007AAB48 /* HomePosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B096E2BE11A40007AAB48 /* HomePosterCell.swift */; };
+		9E1B09712BE11ACE007AAB48 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B09702BE11ACE007AAB48 /* HomeHeaderView.swift */; };
+		9E1B09792BE11C9C007AAB48 /* MockupDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B09782BE11C9C007AAB48 /* MockupDataModel.swift */; };
+		9E1B097B2BE11CBE007AAB48 /* PosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B097A2BE11CBE007AAB48 /* PosterModel.swift */; };
 		9E60904D2BC770C100D018B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60904C2BC770C100D018B2 /* AppDelegate.swift */; };
 		9E60904F2BC770C100D018B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60904E2BC770C100D018B2 /* SceneDelegate.swift */; };
-		9E6090512BC770C100D018B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6090502BC770C100D018B2 /* ViewController.swift */; };
 		9E6090562BC770C300D018B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6090552BC770C300D018B2 /* Assets.xcassets */; };
 		9E6090642BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6090632BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentTests.swift */; };
 		9E60906E2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60906D2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift */; };
@@ -82,10 +89,16 @@
 		9E1B08D02BD295C0007AAB48 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9E1B08D22BD295E1007AAB48 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9E1B08EC2BD96B64007AAB48 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		9E1B08F52BD9E06D007AAB48 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9E1B08F72BD9E1BE007AAB48 /* UISegmentedControl++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl++.swift"; sourceTree = "<group>"; };
+		9E1B096C2BE11A0E007AAB48 /* HomeContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentCell.swift; sourceTree = "<group>"; };
+		9E1B096E2BE11A40007AAB48 /* HomePosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePosterCell.swift; sourceTree = "<group>"; };
+		9E1B09702BE11ACE007AAB48 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		9E1B09782BE11C9C007AAB48 /* MockupDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockupDataModel.swift; sourceTree = "<group>"; };
+		9E1B097A2BE11CBE007AAB48 /* PosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterModel.swift; sourceTree = "<group>"; };
 		9E6090492BC770C100D018B2 /* 34th-SOPT-Seminar-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "34th-SOPT-Seminar-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E60904C2BC770C100D018B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E60904E2BC770C100D018B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9E6090502BC770C100D018B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E6090552BC770C300D018B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E60905A2BC770C300D018B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E60905F2BC770C300D018B2 /* 34th-SOPT-Seminar-AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPT-Seminar-AssignmentTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E1B08952BD2047E007AAB48 /* SnapKit in Frameworks */,
+				9E1B08FB2BDA2682007AAB48 /* LookinServer in Frameworks */,
 				9E1B08982BD20489007AAB48 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +183,8 @@
 			children = (
 				9E1B08BD2BD20D47007AAB48 /* Login */,
 				9E1B08CF2BD295A4007AAB48 /* Welcome */,
-				9E6090502BC770C100D018B2 /* ViewController.swift */,
+				9E1B09442BE0F314007AAB48 /* Home */,
+				9E1B08F02BD974E4007AAB48 /* Main */,
 			);
 			path = Presentations;
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 				9E1B08C42BD21505007AAB48 /* UIView++.swift */,
 				9E1B08CB2BD247DE007AAB48 /* UIButton++.swift */,
 				9E1B08CD2BD294AE007AAB48 /* UIStackView++.swift */,
+				9E1B08F72BD9E1BE007AAB48 /* UISegmentedControl++.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -255,6 +271,66 @@
 				9E60905A2BC770C300D018B2 /* Info.plist */,
 			);
 			path = Supports;
+			sourceTree = "<group>";
+		};
+		9E1B08F02BD974E4007AAB48 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08F22BD97981007AAB48 /* View */,
+				9E1B08F12BD97976007AAB48 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9E1B08F12BD97976007AAB48 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B08F52BD9E06D007AAB48 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9E1B08F22BD97981007AAB48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E1B09442BE0F314007AAB48 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B097C2BE12D1D007AAB48 /* Model */,
+				9E1B09452BE0F319007AAB48 /* View */,
+				9E1B09462BE0F31E007AAB48 /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9E1B09452BE0F319007AAB48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B09702BE11ACE007AAB48 /* HomeHeaderView.swift */,
+				9E1B096E2BE11A40007AAB48 /* HomePosterCell.swift */,
+				9E1B096C2BE11A0E007AAB48 /* HomeContentCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E1B09462BE0F31E007AAB48 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9E1B097C2BE12D1D007AAB48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B097A2BE11CBE007AAB48 /* PosterModel.swift */,
+				9E1B09782BE11C9C007AAB48 /* MockupDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9E6090402BC770C100D018B2 = {
@@ -325,6 +401,7 @@
 			packageProductDependencies = (
 				9E1B08942BD2047E007AAB48 /* SnapKit */,
 				9E1B08972BD20489007AAB48 /* Then */,
+				9E1B08FA2BDA2682007AAB48 /* LookinServer */,
 			);
 			productName = "34th-SOPT-Seminar-Assignment";
 			productReference = 9E6090492BC770C100D018B2 /* 34th-SOPT-Seminar-Assignment.app */;
@@ -401,6 +478,7 @@
 			packageReferences = (
 				9E1B08932BD2047E007AAB48 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9E1B08962BD20489007AAB48 /* XCRemoteSwiftPackageReference "Then" */,
+				9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */,
 			);
 			productRefGroup = 9E60904A2BC770C100D018B2 /* Products */;
 			projectDirPath = "";
@@ -457,17 +535,23 @@
 				9E1B08D32BD295E1007AAB48 /* WelcomeViewController.swift in Sources */,
 				9E1B089F2BD20632007AAB48 /* BaseViewController.swift in Sources */,
 				9E1B08C52BD21505007AAB48 /* UIView++.swift in Sources */,
-				9E6090512BC770C100D018B2 /* ViewController.swift in Sources */,
 				9E1B08AC2BD206F1007AAB48 /* Font.swift in Sources */,
 				9E1B08BC2BD20A02007AAB48 /* UIColor++.swift in Sources */,
 				9E1B08CA2BD2407F007AAB48 /* StringLiterals.swift in Sources */,
+				9E1B096F2BE11A40007AAB48 /* HomePosterCell.swift in Sources */,
+				9E1B097B2BE11CBE007AAB48 /* PosterModel.swift in Sources */,
+				9E1B08F62BD9E06D007AAB48 /* MainViewController.swift in Sources */,
 				9E60904D2BC770C100D018B2 /* AppDelegate.swift in Sources */,
 				9E1B08CC2BD247DE007AAB48 /* UIButton++.swift in Sources */,
 				9E1B08CE2BD294AE007AAB48 /* UIStackView++.swift in Sources */,
+				9E1B09712BE11ACE007AAB48 /* HomeHeaderView.swift in Sources */,
 				9E1B08D12BD295C0007AAB48 /* WelcomeView.swift in Sources */,
+				9E1B096D2BE11A0E007AAB48 /* HomeContentCell.swift in Sources */,
 				9E60904F2BC770C100D018B2 /* SceneDelegate.swift in Sources */,
+				9E1B08F82BD9E1BE007AAB48 /* UISegmentedControl++.swift in Sources */,
 				9E1B08C72BD2253B007AAB48 /* UITextField++.swift in Sources */,
 				9E1B08BF2BD20D59007AAB48 /* LoginView.swift in Sources */,
+				9E1B09792BE11C9C007AAB48 /* MockupDataModel.swift in Sources */,
 				9E1B089D2BD20629007AAB48 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +717,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A95XXD5WT7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "34th-SOPT-Seminar-Assignment/Info.plist";
+				INFOPLIST_FILE = "34th-SOPT-Seminar-Assignment/Supports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -664,7 +748,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A95XXD5WT7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "34th-SOPT-Seminar-Assignment/Info.plist";
+				INFOPLIST_FILE = "34th-SOPT-Seminar-Assignment/Supports/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -820,6 +904,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/QMUI/LookinServer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -832,6 +924,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9E1B08962BD20489007AAB48 /* XCRemoteSwiftPackageReference "Then" */;
 			productName = Then;
+		};
+		9E1B08FA2BDA2682007AAB48 /* LookinServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */;
+			productName = LookinServer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
