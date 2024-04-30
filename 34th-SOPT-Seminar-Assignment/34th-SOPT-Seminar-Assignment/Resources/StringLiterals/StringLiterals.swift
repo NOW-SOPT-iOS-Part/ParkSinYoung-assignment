@@ -31,6 +31,8 @@ enum StringLiterals {
       static let topTabBarTitle3 = "TV프로그램"
       static let topTabBarTitle4 = "영화"
       static let topTabBarTitle5 = "파라마운트+"
+      static let topTabBarTitle6 = "KBO"
+      static let fullViewBtn = "전체보기 >"
    }
 
 }
