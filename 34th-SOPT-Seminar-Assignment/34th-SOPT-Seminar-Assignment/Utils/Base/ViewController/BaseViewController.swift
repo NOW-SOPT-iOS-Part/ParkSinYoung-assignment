@@ -23,8 +23,8 @@ class BaseViewController: UIViewController {
       self.view.backgroundColor = .systemBackground
       self.view.setNeedsUpdateConstraints()
       self.setUI()
-      self.setHierarchy()
-      self.setLayout()
+//      self.setHierarchy()
+//      self.setLayout()
       self.setAddTarget()
       self.setUpKeyboard()
    }
@@ -33,16 +33,17 @@ class BaseViewController: UIViewController {
    // MARK: - UI Components
    func setUI() {}
    // MARK: - Set Hierarchy
-   func setHierarchy(){}
+//   func setHierarchy(){}
    // MARK: - Layout Helper
-   func setLayout() {}
+//   func setLayout() {}
    // MARK: - Add Target
    func setAddTarget() {}
    // MARK: - Add SetUpKeyboard
    func setUpKeyboard() {}
    
    func configureNavigationBar() {
-       navigationController?.navigationBar.barTintColor = .clear
+      
+      navigationController?.navigationBar.layer.borderWidth = 0
       
       let leftBarButton = UIButton()
       leftBarButton.do {
@@ -54,7 +55,6 @@ class BaseViewController: UIViewController {
       }
 
       navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftBarButton)
-
        
        let rightBarButton = UIButton()
       rightBarButton.do {

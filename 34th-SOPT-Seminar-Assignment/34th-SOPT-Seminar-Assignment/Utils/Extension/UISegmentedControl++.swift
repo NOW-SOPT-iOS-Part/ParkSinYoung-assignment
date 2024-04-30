@@ -52,9 +52,9 @@ final class UnderlineSegmentedControl: UISegmentedControl {
    
    // 세그먼트 컨트롤 title 폰트 설정
    private func setTitleFont() {
-      setTitleTextAttributes([.font: UIFont.pretendard(size: 12, weight: .regular), NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-      setTitleTextAttributes([.font: UIFont.pretendard(size: 14, weight: .regular), NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
-      setTitleTextAttributes([.font: UIFont.pretendard(size: 14, weight: .regular), NSAttributedString.Key.foregroundColor: UIColor.white], for: .highlighted)
+      setTitleTextAttributes([.font: UIFont.pretendard(size: 14, weight: .regular), NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+      setTitleTextAttributes([.font: UIFont.pretendard(size: 15, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+      setTitleTextAttributes([.font: UIFont.pretendard(size: 15, weight: .bold), NSAttributedString.Key.foregroundColor: UIColor.white], for: .highlighted)
    }
    
    // underLine position 및 애니메이션 적용
