@@ -46,6 +46,13 @@
 		9E6090642BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6090632BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentTests.swift */; };
 		9E60906E2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60906D2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift */; };
 		9E6090702BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60906F2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITestsLaunchTests.swift */; };
+		9E659FE12BEDD389004B9297 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 9E659FE02BEDD389004B9297 /* Moya */; };
+		9E659FE42BEDD4F4004B9297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FE32BEDD4F4004B9297 /* Config.swift */; };
+		9E659FE62BEDD509004B9297 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FE52BEDD509004B9297 /* NetworkResult.swift */; };
+		9E659FE82BEDD517004B9297 /* MoyaLoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FE72BEDD517004B9297 /* MoyaLoggingPlugin.swift */; };
+		9E659FEA2BEDD557004B9297 /* BoxOfficeReponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FE92BEDD557004B9297 /* BoxOfficeReponseModel.swift */; };
+		9E659FEE2BEDD8BD004B9297 /* BoxOffieTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FED2BEDD8BD004B9297 /* BoxOffieTargetType.swift */; };
+		9E659FF02BEDD923004B9297 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FEF2BEDD923004B9297 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +113,12 @@
 		9E6090692BC770C300D018B2 /* 34th-SOPT-Seminar-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "34th-SOPT-Seminar-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E60906D2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPT_Seminar_AssignmentUITests.swift; sourceTree = "<group>"; };
 		9E60906F2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _4th_SOPT_Seminar_AssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9E659FE32BEDD4F4004B9297 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		9E659FE52BEDD509004B9297 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		9E659FE72BEDD517004B9297 /* MoyaLoggingPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggingPlugin.swift; sourceTree = "<group>"; };
+		9E659FE92BEDD557004B9297 /* BoxOfficeReponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeReponseModel.swift; sourceTree = "<group>"; };
+		9E659FED2BEDD8BD004B9297 /* BoxOffieTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffieTargetType.swift; sourceTree = "<group>"; };
+		9E659FEF2BEDD923004B9297 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +128,7 @@
 			files = (
 				9E1B08952BD2047E007AAB48 /* SnapKit in Frameworks */,
 				9E1B08FB2BDA2682007AAB48 /* LookinServer in Frameworks */,
+				9E659FE12BEDD389004B9297 /* Moya in Frameworks */,
 				9E1B08982BD20489007AAB48 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +372,7 @@
 			children = (
 				9E1B08EB2BD969E1007AAB48 /* App */,
 				9E1B08EE2BD96D4C007AAB48 /* Supports */,
+				9E659FE22BEDD4E5004B9297 /* Network */,
 				9E1B08B72BD208BD007AAB48 /* Presentations */,
 				9E1B08B82BD208D8007AAB48 /* Resources */,
 				9E1B08C22BD214E1007AAB48 /* Utils */,
@@ -382,6 +397,19 @@
 			path = "34th-SOPT-Seminar-AssignmentUITests";
 			sourceTree = "<group>";
 		};
+		9E659FE22BEDD4E5004B9297 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9E659FE32BEDD4F4004B9297 /* Config.swift */,
+				9E659FE52BEDD509004B9297 /* NetworkResult.swift */,
+				9E659FE72BEDD517004B9297 /* MoyaLoggingPlugin.swift */,
+				9E659FE92BEDD557004B9297 /* BoxOfficeReponseModel.swift */,
+				9E659FED2BEDD8BD004B9297 /* BoxOffieTargetType.swift */,
+				9E659FEF2BEDD923004B9297 /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -402,6 +430,7 @@
 				9E1B08942BD2047E007AAB48 /* SnapKit */,
 				9E1B08972BD20489007AAB48 /* Then */,
 				9E1B08FA2BDA2682007AAB48 /* LookinServer */,
+				9E659FE02BEDD389004B9297 /* Moya */,
 			);
 			productName = "34th-SOPT-Seminar-Assignment";
 			productReference = 9E6090492BC770C100D018B2 /* 34th-SOPT-Seminar-Assignment.app */;
@@ -479,6 +508,7 @@
 				9E1B08932BD2047E007AAB48 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				9E1B08962BD20489007AAB48 /* XCRemoteSwiftPackageReference "Then" */,
 				9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */,
+				9E659FDF2BEDD389004B9297 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 9E60904A2BC770C100D018B2 /* Products */;
 			projectDirPath = "";
@@ -541,14 +571,20 @@
 				9E1B096F2BE11A40007AAB48 /* HomePosterCell.swift in Sources */,
 				9E1B097B2BE11CBE007AAB48 /* PosterModel.swift in Sources */,
 				9E1B08F62BD9E06D007AAB48 /* MainViewController.swift in Sources */,
+				9E659FEA2BEDD557004B9297 /* BoxOfficeReponseModel.swift in Sources */,
 				9E60904D2BC770C100D018B2 /* AppDelegate.swift in Sources */,
 				9E1B08CC2BD247DE007AAB48 /* UIButton++.swift in Sources */,
 				9E1B08CE2BD294AE007AAB48 /* UIStackView++.swift in Sources */,
 				9E1B09712BE11ACE007AAB48 /* HomeHeaderView.swift in Sources */,
 				9E1B08D12BD295C0007AAB48 /* WelcomeView.swift in Sources */,
+				9E659FF02BEDD923004B9297 /* APIService.swift in Sources */,
+				9E659FE62BEDD509004B9297 /* NetworkResult.swift in Sources */,
 				9E1B096D2BE11A0E007AAB48 /* HomeContentCell.swift in Sources */,
+				9E659FEE2BEDD8BD004B9297 /* BoxOffieTargetType.swift in Sources */,
 				9E60904F2BC770C100D018B2 /* SceneDelegate.swift in Sources */,
 				9E1B08F82BD9E1BE007AAB48 /* UISegmentedControl++.swift in Sources */,
+				9E659FE42BEDD4F4004B9297 /* Config.swift in Sources */,
+				9E659FE82BEDD517004B9297 /* MoyaLoggingPlugin.swift in Sources */,
 				9E1B08C72BD2253B007AAB48 /* UITextField++.swift in Sources */,
 				9E1B08BF2BD20D59007AAB48 /* LoginView.swift in Sources */,
 				9E1B09792BE11C9C007AAB48 /* MockupDataModel.swift in Sources */,
@@ -713,6 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A95XXD5WT7;
@@ -727,6 +764,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MOVIEAPI_KEY = 98a8c769410dc81abd967ed65b1dc2f5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.-4th-SOPT-Seminar-Assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -744,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A95XXD5WT7;
@@ -758,6 +797,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MOVIEAPI_KEY = 98a8c769410dc81abd967ed65b1dc2f5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.test.-4th-SOPT-Seminar-Assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -912,6 +952,14 @@
 				minimumVersion = 1.2.8;
 			};
 		};
+		9E659FDF2BEDD389004B9297 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -929,6 +977,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */;
 			productName = LookinServer;
+		};
+		9E659FE02BEDD389004B9297 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E659FDF2BEDD389004B9297 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
