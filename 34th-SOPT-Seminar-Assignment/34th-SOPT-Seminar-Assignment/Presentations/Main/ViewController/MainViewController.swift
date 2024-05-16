@@ -25,13 +25,14 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
       setCollectionView()
       setHierarchy()
       setLayout()
-      view.backgroundColor = .black
-      navigationController?.navigationBar.backgroundColor = .clear
-      navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
       requestMovieInfo()
    }
    
    override func setUI() {
+      view.backgroundColor = .black
+      navigationController?.navigationBar.backgroundColor = .clear
+      navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+      
       segmentedControlScrollView.do {
          $0.showsHorizontalScrollIndicator = false
          $0.showsVerticalScrollIndicator = false
