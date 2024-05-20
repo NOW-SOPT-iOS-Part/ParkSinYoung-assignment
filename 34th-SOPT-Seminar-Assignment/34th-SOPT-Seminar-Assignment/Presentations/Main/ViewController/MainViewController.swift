@@ -25,12 +25,14 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
       setCollectionView()
       setHierarchy()
       setLayout()
-      view.backgroundColor = .black
-      navigationController?.navigationBar.backgroundColor = .clear
-      navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+      requestMovieInfo()
    }
    
    override func setUI() {
+      view.backgroundColor = .black
+      navigationController?.navigationBar.backgroundColor = .clear
+      navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+      
       segmentedControlScrollView.do {
          $0.showsHorizontalScrollIndicator = false
          $0.showsVerticalScrollIndicator = false
@@ -132,6 +134,7 @@ class MainViewController: BaseViewController, UIScrollViewDelegate {
       }
    }
    
+   
 }
 
 extension MainViewController {
@@ -208,6 +211,27 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
    
+   private func requestMovieInfo() {
+      APIService.shared.getMovieInfo(date: "20240504") { [weak self] response in switch response {
+      case .success(let data):
+          guard let data = data as? BoxOfficeReponseModel else {
+              return }
+         print(data)
+      case .requestErr:
+          print("요청 오류 입니다")
+      case .decodedErr:
+          print("디코딩 오류 입니다")
+      case .pathErr:
+          print("경로 오류 입니다")
+      case .serverErr:
+          print("서버 오류입니다")
+      case .networkFail:
+          print("네트워크 오류입니다")
+      }
+  }
+      
+   }
+   
    func collectionView(_ collectionView: UICollectionView,
                        viewForSupplementaryElementOfKind kind: String,
                        at indexPath: IndexPath) -> UICollectionReusableView {
@@ -217,6 +241,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
          as! HomeHeaderView
          headerView.titleLabel.text = MockupDataModel.title[indexPath.section - 1]
          headerView.titleLabel.textColor = .white
+         
          return headerView
       }
       else {
