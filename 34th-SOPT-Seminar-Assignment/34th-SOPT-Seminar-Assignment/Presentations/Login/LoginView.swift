@@ -63,9 +63,9 @@ final class LoginView: BaseView {
    }
    
    let divider: UIView = {
-       let view = UIView()
-       view.backgroundColor = .gray4
-       return view
+      let view = UIView()
+      view.backgroundColor = .gray4
+      return view
    }()
    
    let noAccountLabel = UILabel().then {
@@ -84,7 +84,7 @@ final class LoginView: BaseView {
       $0.spacing = 33
    }
    
-
+   
    lazy var clearButton = UIButton().then {
       $0.setImage(UIImage(named: "x-circle"), for: .normal)
       $0.imageView?.snp.makeConstraints{
@@ -126,15 +126,15 @@ final class LoginView: BaseView {
       }
       
       idTextField.snp.makeConstraints {
-          $0.height.equalTo(52)
-          $0.top.equalTo(titleLabel.snp.bottom).offset(31)
-          $0.horizontalEdges.equalToSuperview().inset(20)
+         $0.height.equalTo(52)
+         $0.top.equalTo(titleLabel.snp.bottom).offset(31)
+         $0.horizontalEdges.equalToSuperview().inset(20)
       }
       
       passwordTextField.snp.makeConstraints {
-          $0.height.equalTo(idTextField)
-          $0.top.equalTo(idTextField.snp.bottom).offset(7)
-          $0.horizontalEdges.equalTo(idTextField)
+         $0.height.equalTo(idTextField)
+         $0.top.equalTo(idTextField.snp.bottom).offset(7)
+         $0.horizontalEdges.equalTo(idTextField)
       }
       
       loginButton.snp.makeConstraints {
@@ -144,19 +144,19 @@ final class LoginView: BaseView {
       }
       
       toFindIdPwStackView.snp.makeConstraints {
-          $0.top.equalTo(loginButton.snp.bottom).offset(31)
-          $0.centerX.equalToSuperview()
+         $0.top.equalTo(loginButton.snp.bottom).offset(31)
+         $0.centerX.equalToSuperview()
       }
       
       divider.snp.makeConstraints {
-          $0.width.equalTo(1)
-          $0.height.equalTo(12)
-          $0.centerY.equalToSuperview()
+         $0.width.equalTo(1)
+         $0.height.equalTo(12)
+         $0.centerY.equalToSuperview()
       }
       
       accountStackView.snp.makeConstraints {
-          $0.top.equalTo(findIdButton.snp.bottom).offset(28)
-          $0.centerX.equalToSuperview()
+         $0.top.equalTo(findIdButton.snp.bottom).offset(28)
+         $0.centerX.equalToSuperview()
       }
       
       eyeButton.snp.makeConstraints {
