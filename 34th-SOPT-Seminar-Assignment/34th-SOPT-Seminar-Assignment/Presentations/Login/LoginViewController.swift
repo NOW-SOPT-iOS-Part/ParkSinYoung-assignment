@@ -15,9 +15,7 @@ final class LoginViewController: BaseViewController {
    
    private let loginView = LoginView()
    private var isLoginAble = false
-   
    private let disposeBag = DisposeBag()
-   
    
    override func loadView() {
       view = loginView
@@ -26,127 +24,145 @@ final class LoginViewController: BaseViewController {
    override func viewDidLoad() {
       super.viewDidLoad()
       view.backgroundColor = .black
+      bindUI()
    }
    
-   override func setAddTarget() {
-      let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(self.view.endEditing(_:)))
-      self.view.addGestureRecognizer(tapGesture)
+   private func bindUI() {
+      // 텍스트 필드의 이벤트 바인딩
+      bindTextFieldEvents()
       
+      // 텍스트 필드 입력 내용으로 로그인 버튼 상태 관리
+      bindTextFieldsForLoginButton()
       
-      // MARK: - DidEndOnExit 파트
-      // id 텍스트 필드 에디팅이 끝났을 때 - 컨트롤 이벤트
+      // 로그인 버튼 탭 이벤트 처리
+      bindLoginButtonTap()
+      
+      // Clear 버튼 탭 이벤트 처리
+      bindClearButtonTap()
+      
+      // Eye 버튼 탭 이벤트 처리
+      bindEyeButtonTap()
+   }
+   
+   private func bindTextFieldEvents() {
+      // DidEndOnExit 이벤트 바인딩
       loginView.idTextField.rx.controlEvent(.editingDidEndOnExit)
-      // 해당 컨트롤 이벤트를 구독
-         .subscribe({ [weak self] _ in
-            // 해당 이벤트에서 진행하는 내용
-            // pw 텍스트필드가 첫번째 responder로 설정됨
+         .subscribe(onNext: { [weak self] in
             self?.loginView.passwordTextField.becomeFirstResponder()
          })
-         .disposed(by: disposeBag) // 위 구독 내용 disposeBag 묶어주기
+         .disposed(by: disposeBag)
       
       loginView.passwordTextField.rx.controlEvent(.editingDidEndOnExit)
-         .subscribe({ [weak self] _ in
+         .subscribe(onNext: { [weak self] in
             self?.loginView.passwordTextField.resignFirstResponder()
          })
          .disposed(by: disposeBag)
       
-      // MARK: - BeginEditing 파트
+      // BeginEditing 이벤트 바인딩
       loginView.idTextField.rx.controlEvent(.editingDidBegin)
-         .subscribe({ [weak self] _ in
+         .subscribe(onNext: { [weak self] in
             self?.loginView.idTextField.makeBorderLine(width: 1, color: .gray2)
          })
          .disposed(by: disposeBag)
       
       loginView.passwordTextField.rx.controlEvent(.editingDidBegin)
-         .subscribe({ [weak self] _ in
+         .subscribe(onNext: { [weak self] in
             self?.loginView.passwordTextField.makeBorderLine(width: 1, color: .gray2)
          })
          .disposed(by: disposeBag)
       
-      // MARK: - EndEditing 파트
+      // EndEditing 이벤트 바인딩
       loginView.idTextField.rx.controlEvent(.editingDidEnd)
-         .subscribe({ [weak self] _ in
+         .subscribe(onNext: { [weak self] in
             self?.loginView.idTextField.makeBorderLine(width: 0, color: .clear)
          })
          .disposed(by: disposeBag)
       
       loginView.passwordTextField.rx.controlEvent(.editingDidEnd)
-         .subscribe({ [weak self] _ in
+         .subscribe(onNext: { [weak self] in
             self?.loginView.passwordTextField.makeBorderLine(width: 0, color: .clear)
          })
          .disposed(by: disposeBag)
-      
-      
+   }
+   
+   private func bindTextFieldsForLoginButton() {
       let idTextObservable = loginView.idTextField.rx.text.orEmpty.asObservable()
       let passwordTextObservable = loginView.passwordTextField.rx.text.orEmpty.asObservable()
       
-      // 두 텍스트 필드의 텍스트를 합성하여 버튼 상태를 업데이트
-      Observable.combineLatest(idTextObservable, passwordTextObservable) { idText, passwordText in
-         return (idText, passwordText)
+      Observable.combineLatest(idTextObservable, passwordTextObservable)
+         .subscribe(onNext: { [weak self] idText, passwordText in
+            guard let self = self else { return }
+            
+            self.updateLoginButtonState(idText: idText, passwordText: passwordText)
+            self.updateClearAndEyeButtonsState(passwordText: passwordText)
+         })
+         .disposed(by: disposeBag)
+   }
+   
+   private func updateLoginButtonState(idText: String, passwordText: String) {
+      let loginButton = loginView.loginButton
+      if !idText.isEmpty && !passwordText.isEmpty {
+         loginButton.isEnabled = true
+         loginButton.backgroundColor = .mainColor
+         loginButton.setTitleColor(.white, for: .normal)
+      } else {
+         loginButton.isEnabled = false
+         loginButton.backgroundColor = .black
+         loginButton.setTitleColor(.gray2, for: .normal)
       }
-      .subscribe(onNext: { [weak self] idText, passwordText in
-         guard let self = self else { return }
-         let loginBtn = self.loginView.loginButton
-         
-         // 패스워드 텍스트필드가 안비었을 때
-         if !passwordText.isEmpty {
-            self.loginView.clearButton.isHidden = false
-            self.loginView.clearButton.isEnabled = true
-            self.loginView.eyeButton.isHidden = false
-            self.loginView.eyeButton.isEnabled = true
-         } else {
-            self.loginView.clearButton.isHidden = true
-            self.loginView.clearButton.isEnabled = false
-            self.loginView.eyeButton.isHidden = true
-            self.loginView.eyeButton.isEnabled = false
-         }
-         
-         // 로그인 버튼 상태 업데이트
-         if !idText.isEmpty, !passwordText.isEmpty {
-            loginBtn.isEnabled = true
-            loginBtn.backgroundColor = .mainColor
-            loginBtn.setTitleColor(.white, for: .normal)
-         } else {
-            loginBtn.isEnabled = false
-            loginBtn.backgroundColor = .black
-            loginBtn.setTitleColor(.gray2, for: .normal)
-         }
-      })
-      .disposed(by: disposeBag)
+   }
+   
+   private func updateClearAndEyeButtonsState(passwordText: String) {
+      let clearButton = loginView.clearButton
+      let eyeButton = loginView.eyeButton
       
-      // 로그인 버튼 탭 이벤트 처리
+      if !passwordText.isEmpty {
+         clearButton.isHidden = false
+         clearButton.isEnabled = true
+         eyeButton.isHidden = false
+         eyeButton.isEnabled = true
+      } else {
+         clearButton.isHidden = true
+         clearButton.isEnabled = false
+         eyeButton.isHidden = true
+         eyeButton.isEnabled = false
+      }
+   }
+   
+   private func bindLoginButtonTap() {
       loginView.loginButton.rx.tap
          .subscribe(onNext: { [weak self] in
-            guard let self = self else { return } //text가 있을 경우 가정이기에 옵셔널 체이닝
-            if let idText = self.loginView.idTextField.text, let passwordText = self.loginView.passwordTextField.text {
-               if !idText.isEmpty, !passwordText.isEmpty {
-                  let welcomeVC = WelcomeViewController()
-                  welcomeVC.nickname = idText
-                  self.navigationController?.pushViewController(welcomeVC, animated: true)
-               }
-            }
+            guard let self = self else { return }
+            self.handleLogin()
          })
          .disposed(by: disposeBag)
-      
-      // Clear 버튼 탭 이벤트 처리
+   }
+   
+   private func handleLogin() {
+      if let idText = loginView.idTextField.text, let passwordText = loginView.passwordTextField.text {
+         if !idText.isEmpty && !passwordText.isEmpty {
+            let welcomeVC = WelcomeViewController()
+            welcomeVC.nickname = idText
+            self.navigationController?.pushViewController(welcomeVC, animated: true)
+         }
+      }
+   }
+   
+   private func bindClearButtonTap() {
       loginView.clearButton.rx.tap
          .subscribe(onNext: { [weak self] in
-            guard let self = self else { return }
-            print("지금 눌림")
-            self.loginView.passwordTextField.text = ""
+            self?.loginView.passwordTextField.text = ""
          })
          .disposed(by: disposeBag)
-      
-      // Eye 버튼 탭 이벤트 처리
+   }
+   
+   private func bindEyeButtonTap() {
       loginView.eyeButton.rx.tap
          .subscribe(onNext: { [weak self] in
             guard let self = self else { return }
-            print("지금 didTapEyeButton눌림")
             self.loginView.eyeButton.isSelected.toggle()
             self.loginView.passwordTextField.isSecureTextEntry.toggle()
          })
          .disposed(by: disposeBag)
-      
    }
-   
 }
