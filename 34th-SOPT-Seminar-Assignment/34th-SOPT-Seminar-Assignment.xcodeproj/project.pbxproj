@@ -46,6 +46,9 @@
 		9E6090642BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6090632BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentTests.swift */; };
 		9E60906E2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60906D2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITests.swift */; };
 		9E6090702BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E60906F2BC770C300D018B2 /* _4th_SOPT_Seminar_AssignmentUITestsLaunchTests.swift */; };
+		9E6451E32C1238FA0026C29D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6451E22C1238FA0026C29D /* RxCocoa */; };
+		9E6451E52C1238FA0026C29D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6451E42C1238FA0026C29D /* RxRelay */; };
+		9E6451E72C1238FA0026C29D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9E6451E62C1238FA0026C29D /* RxSwift */; };
 		9E659FE12BEDD389004B9297 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 9E659FE02BEDD389004B9297 /* Moya */; };
 		9E659FE42BEDD4F4004B9297 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FE32BEDD4F4004B9297 /* Config.swift */; };
 		9E659FE62BEDD509004B9297 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E659FE52BEDD509004B9297 /* NetworkResult.swift */; };
@@ -126,10 +129,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6451E52C1238FA0026C29D /* RxRelay in Frameworks */,
 				9E1B08952BD2047E007AAB48 /* SnapKit in Frameworks */,
 				9E1B08FB2BDA2682007AAB48 /* LookinServer in Frameworks */,
+				9E6451E32C1238FA0026C29D /* RxCocoa in Frameworks */,
 				9E659FE12BEDD389004B9297 /* Moya in Frameworks */,
 				9E1B08982BD20489007AAB48 /* Then in Frameworks */,
+				9E6451E72C1238FA0026C29D /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +437,9 @@
 				9E1B08972BD20489007AAB48 /* Then */,
 				9E1B08FA2BDA2682007AAB48 /* LookinServer */,
 				9E659FE02BEDD389004B9297 /* Moya */,
+				9E6451E22C1238FA0026C29D /* RxCocoa */,
+				9E6451E42C1238FA0026C29D /* RxRelay */,
+				9E6451E62C1238FA0026C29D /* RxSwift */,
 			);
 			productName = "34th-SOPT-Seminar-Assignment";
 			productReference = 9E6090492BC770C100D018B2 /* 34th-SOPT-Seminar-Assignment.app */;
@@ -509,6 +518,7 @@
 				9E1B08962BD20489007AAB48 /* XCRemoteSwiftPackageReference "Then" */,
 				9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */,
 				9E659FDF2BEDD389004B9297 /* XCRemoteSwiftPackageReference "Moya" */,
+				9E6451E12C1238FA0026C29D /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 9E60904A2BC770C100D018B2 /* Products */;
 			projectDirPath = "";
@@ -952,6 +962,14 @@
 				minimumVersion = 1.2.8;
 			};
 		};
+		9E6451E12C1238FA0026C29D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 		9E659FDF2BEDD389004B9297 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -977,6 +995,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9E1B08F92BDA2682007AAB48 /* XCRemoteSwiftPackageReference "LookinServer" */;
 			productName = LookinServer;
+		};
+		9E6451E22C1238FA0026C29D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E6451E12C1238FA0026C29D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		9E6451E42C1238FA0026C29D /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E6451E12C1238FA0026C29D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		9E6451E62C1238FA0026C29D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E6451E12C1238FA0026C29D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		9E659FE02BEDD389004B9297 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
